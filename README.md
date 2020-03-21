@@ -1,22 +1,22 @@
 ## 介绍
 实时校验input输入框的值vue插件
-#### [在线体验demo](https://yaoxiangmei.github.io/v-input)
+[在线体验demo](https://yaoxiangmei.github.io/v-input-check)
 ## 安装
 #### npm
 ```bash
-  npm i v-input -S
+  npm i v-input-check -S
 ```
 #### 将插件安装到vue
 ``` js
     import Vue from 'Vue'
-    import VInputCheck from 'v-Input'
+    import VInputCheck from 'v-input-check'
     
     Vue.use(VInputCheck)
 ```
 #### cdn
 ```js
     <script src="dist/vue.min.js"></script>
-    <script src="https://unpkg.com/v-input@0.0.1/v-input-browser.min.js"></script>
+    <script src="https://unpkg.com/v-input-check@0.0.1/v-input-check-browser.min.js"></script>
     
     Vue.use(VInputCheck)
 ```

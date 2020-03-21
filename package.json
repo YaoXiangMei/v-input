@@ -6,10 +6,9 @@
     "vue",
     "input",
     "directive",
-    "vue input",
     "vue directive",
-    "v-input",
-    "v-input-check"
+    "v-input-check",
+    "v-input"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -57,6 +56,6 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git@github.com:YaoXiangMei/v-input.git"
+    "url": "git@github.com:YaoXiangMei/v-input-check.git"
   }
 }
