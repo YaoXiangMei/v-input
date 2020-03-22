@@ -1,6 +1,6 @@
 {
   "name": "v-input-check",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "keywords": [
     "vue",
@@ -22,8 +22,7 @@
   "main": "dist/v-input-check.umd.js",
   "module": "dist/v-input-check.esm.js",
   "unpkg": "dist/v-input-check.browser.min.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "core-js": "^3.6.4",
     "element-ui": "^2.4.5",
