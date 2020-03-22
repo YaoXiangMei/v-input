@@ -1,5 +1,6 @@
 ## 介绍
-实时校验input输入框的值vue插件
+实时校验input输入框的值vue插件  
+
 [在线体验demo](https://yaoxiangmei.github.io/v-input-check)
 ## 安装
 #### npm
@@ -16,7 +17,7 @@
 #### cdn
 ```js
     <script src="dist/vue.min.js"></script>
-    <script src="https://unpkg.com/v-input-check@0.0.1/v-input-check-browser.min.js"></script>
+    <script src="https://unpkg.com/v-input-check"></script>
     
     Vue.use(VInputCheck)
 ```

@@ -21,7 +21,7 @@
     <pre v-highlightjs>
       <code class="javascript">
         &lt;script src="dist/vue.min.js" /&gt;
-        &lt;script src="https://unpkg.com/v-input@1.0.0/v-input-browser.min.js" /&gt;
+        &lt;script src="https://unpkg.com/v-input-check" /&gt;
 
         Vue.use(VInputCheck)
       </code>
