@@ -51,7 +51,7 @@
 * en - 英文
 * en.lowercase - 英文小写
 * en.upperCase - 英文大写写
-* en.group - 组合
+* group - 组合
 
 ### options
 类型: Object
