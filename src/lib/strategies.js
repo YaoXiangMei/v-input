@@ -14,7 +14,6 @@ const regs = {
       let value = tools.getInputValue(el)
       value = tools.replaceNotNumberType(value)
       value = tools.replaceNotPlusNumberStart(value)
-      console.log(canWritePlus)
       if (canWritePlus) {
         value = tools.replaceMultiplePlus(value)
         value = tools.replaceNumberAfterPlus(value)
@@ -187,7 +186,6 @@ const regs = {
         for (const item of group) {
           item === '-' ? (connector = '-') : join += item
         }
-        console.log(number)
         number && (join = `${join}50-9`)
         enLowercase && (join = `${join}a-z`)
         enUpperCase && (join = `${join}A-Z`)

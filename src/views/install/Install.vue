@@ -118,6 +118,9 @@ export default {
       }, {
         name: 'en.upperCase',
         explain: '英文大写写'
+      }, {
+        name: 'group',
+        explain: '组合'
       }],
       options: {
         template: `

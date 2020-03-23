@@ -32,8 +32,8 @@ module.exports = {
     /*
       @description 生产环境不得使用console和debugger
       */
-    'no-console': process.env.NODE_ENV === 'production' ? 0 : 0,
-    'no-debugger': process.env.NODE_ENV === 'production' ? 0 : 0,
+    'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     /*
       @description 关闭括号是否新起一行
       @see {@link = https://eslint.vuejs.org/rules/html-closing-bracket-newline.html}
