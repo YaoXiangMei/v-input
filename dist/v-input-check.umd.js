@@ -2016,7 +2016,6 @@
 	   * @param  { string } value
 	   */
 	  replaceZeroStart: function replaceZeroStart(value) {
-	    console.log(/^(\+|-)?0/g.test(value));
 	    return value.replace(/^(\+|-)?0/g, '$1');
 	  },
 
@@ -2205,7 +2204,6 @@
 	    var value = tools.getInputValue(el);
 	    value = tools.replaceNotNumberType(value);
 	    value = tools.replaceNotPlusNumberStart(value);
-	    console.log(canWritePlus);
 
 	    if (canWritePlus) {
 	      value = tools.replaceMultiplePlus(value);
@@ -2224,7 +2222,7 @@
 	    typeof change === 'function' && change(value, {
 	      flag: regs.number.test(value) && parseFloat(value) > 0,
 	      extra: extra
-	    });
+	    }, el);
 	  },
 
 	  /**
@@ -2256,7 +2254,7 @@
 	    typeof change === 'function' && change(value, {
 	      flag: regs.integerNumber.test(value),
 	      extra: extra
-	    });
+	    }, el);
 	  },
 
 	  /**
@@ -2285,7 +2283,7 @@
 	    typeof change === 'function' && change(value, {
 	      flag: regs.number.test(value),
 	      extra: extra
-	    });
+	    }, el);
 	  },
 
 	  /**
@@ -2311,7 +2309,7 @@
 	    typeof change === 'function' && change(value, {
 	      flag: regs.integerNumber.test(value),
 	      extra: extra
-	    });
+	    }, el);
 	  },
 
 	  /**
@@ -2344,7 +2342,7 @@
 	    typeof change === 'function' && change(value, {
 	      flag: regs.integerNumber.test(value),
 	      extra: extra
-	    });
+	    }, el);
 	  },
 
 	  /**
@@ -2384,7 +2382,7 @@
 	    typeof change === 'function' && change(value, {
 	      flag: regs.number.test(value),
 	      extra: extra
-	    });
+	    }, el);
 	  },
 
 	  /**
@@ -2405,7 +2403,7 @@
 	    typeof change === 'function' && change(value, {
 	      flag: !!value,
 	      extra: extra
-	    });
+	    }, el);
 	  },
 	  zh: function zh(el, binding) {
 	    // 中文
@@ -2418,7 +2416,7 @@
 	    typeof change === 'function' && change(value, {
 	      flag: !!value,
 	      extra: extra
-	    });
+	    }, el);
 	  },
 	  en: function en(el, binding) {
 	    // 英文
@@ -2446,7 +2444,7 @@
 	    typeof change === 'function' && change(value, {
 	      flag: !!value,
 	      extra: extra
-	    });
+	    }, el);
 	  },
 	  group: function group(el, binding) {
 	    // 组合
@@ -2482,7 +2480,6 @@
 	        _iterator.f();
 	      }
 
-	      console.log(number);
 	      number && (join = "".concat(join, "50-9"));
 	      enLowercase && (join = "".concat(join, "a-z"));
 	      enUpperCase && (join = "".concat(join, "A-Z"));
@@ -2506,11 +2503,11 @@
 	    typeof change === 'function' && change(el.value, {
 	      flag: !!el.value,
 	      extra: extra
-	    });
+	    }, el);
 	  }
 	};
 
-	var version$1 = "0.0.1";
+	var version$1 = "0.0.5";
 
 	var directives = {
 	  'input-check': {
