@@ -27,7 +27,7 @@ const regs = {
       value = tools.replaceAllMinus(value)
       value = tools.retainDpLen(value, DpLen)
       tools.setInputValue(el, value)
-      typeof change === 'function' && change(value, { flag: regs.number.test(value) && parseFloat(value) > 0, extra })
+      typeof change === 'function' && change(value, { flag: regs.number.test(value) && parseFloat(value) > 0, extra }, el)
     },
     /**
    * @description 正整数，只能输入+、数字
@@ -49,7 +49,7 @@ const regs = {
         value = tools.replaceAllPlus(value)
       }
       tools.setInputValue(el, value)
-      typeof change === 'function' && change(value, { flag: regs.integerNumber.test(value), extra })
+      typeof change === 'function' && change(value, { flag: regs.integerNumber.test(value), extra }, el)
     },
     /**
    * @description 负数，只能输入-、.、数字
@@ -69,7 +69,7 @@ const regs = {
       value = tools.replaceMultipleDp(value)
       value = tools.retainDpLen(value, DpLen)
       tools.setInputValue(el, value)
-      typeof change === 'function' && change(value, { flag: regs.number.test(value), extra })
+      typeof change === 'function' && change(value, { flag: regs.number.test(value), extra }, el)
     },
     /**
    * @description 负整数，只能输入-、数字
@@ -88,7 +88,7 @@ const regs = {
       value = tools.replaceNumberAfterMinus(value)
       value = tools.replaceDpBeforeNotNumber(value)
       tools.setInputValue(el, value)
-      typeof change === 'function' && change(value, { flag: regs.integerNumber.test(value), extra })
+      typeof change === 'function' && change(value, { flag: regs.integerNumber.test(value), extra }, el)
     },
     /**
    * @description 整数，只能输入+、- 。数字
@@ -112,7 +112,7 @@ const regs = {
       value = tools.replaceMultipleMinus(value)
       value = tools.replaceNumberAfterMinus(value)
       tools.setInputValue(el, value)
-      typeof change === 'function' && change(value, { flag: regs.integerNumber.test(value), extra })
+      typeof change === 'function' && change(value, { flag: regs.integerNumber.test(value), extra }, el)
     },
     /**
    * @description 能输入正数。负数。小数
@@ -140,7 +140,7 @@ const regs = {
       value = tools.replaceMultipleDp(value)
       value = tools.retainDpLen(value, DpLen)
       tools.setInputValue(el, value)
-      typeof change === 'function' && change(value, { flag: regs.number.test(value), extra })
+      typeof change === 'function' && change(value, { flag: regs.number.test(value), extra }, el)
     },
     /**
    * @description 能输入数字
@@ -155,14 +155,14 @@ const regs = {
       value = tools.replaceAllMinus(value)
       value = tools.replaceAllDp(value)
       tools.setInputValue(el, value)
-      typeof change === 'function' && change(value, { flag: !!value, extra })
+      typeof change === 'function' && change(value, { flag: !!value, extra }, el)
     },
     zh: (el, binding) => { // 中文
       const { value: { change, extra } } = binding
       let value = tools.getInputValue(el)
       value = value.replace(/[^\u4e00-\u9fa5]/g, '')
       tools.setInputValue(el, value)
-      typeof change === 'function' && change(value, { flag: !!value, extra })
+      typeof change === 'function' && change(value, { flag: !!value, extra }, el)
     },
     en: (el, binding) => { // 英文
       const { modifiers: { lowercase = false, upperCase = false }, value: { change, extra } } = binding
@@ -176,7 +176,7 @@ const regs = {
         value = value.replace(/[^A-Z]+/g, '')
       }
       tools.setInputValue(el, value)
-      typeof change === 'function' && change(value, { flag: !!value, extra })
+      typeof change === 'function' && change(value, { flag: !!value, extra }, el)
     },
     group: (el, binding) => { // 组合
       const { modifiers: { number = false, enLowercase = false, enUpperCase = false, zh = false }, value: { group, change, extra } } = binding
@@ -203,7 +203,7 @@ const regs = {
         el.__oldValue = el.value = ''
       }
       el.__reg.lastIndex = 0
-      typeof change === 'function' && change(el.value, { flag: !!el.value, extra })
+      typeof change === 'function' && change(el.value, { flag: !!el.value, extra }, el)
     }
   }
 export default strategies

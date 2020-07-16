@@ -46,7 +46,6 @@
           methods: {
               change: (value, data) => {
                   this.price = value
-                  console.log(value, data)
               }
           }
         }

@@ -209,7 +209,6 @@ const tools = {
    * @param  { string } value
    */
   replaceZeroStart (value) {
-    console.log(/^(\+|-)?0/g.test(value))
     return value.replace(/^(\+|-)?0/g, '$1')
   },
   /**

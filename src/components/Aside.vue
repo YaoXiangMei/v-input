@@ -55,16 +55,13 @@ export default {
   },
   computed: {
     defaultActive () {
-      console.log(this.$route.name)
       return this.$route.name
     }
   },
   methods: {
     handleOpen (key, keyPath) {
-      console.log(key, keyPath)
     },
     handleClose (key, keyPath) {
-      console.log(key, keyPath)
     },
     handlerTo (name) {
       this.$router.push({ name })

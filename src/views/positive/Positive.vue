@@ -67,7 +67,7 @@ export default {
     }
   },
   methods: {
-    change (value, { flag }) {
+    change (value, { flag }, el) {
       Object.assign(this.positive, {
         value,
         flag
